@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<title>IRON ZONE</title>
+<head>
+  <div id="templatemo_top_panel1" align="center">
+	<div class="sail" align="left"><img src="images/sail_logo/sail_small_logo.png" alt="Sail logo"></div>
+        <div id="templatemo_sitetitle" align="center">
+            INCOS IRON ZONE
+        </div>
+        <div id="templatemo_currentdate1" >
+			<script type="text/javascript">
+        </script>
+        </div>
+    </div>
+  <DIV id="ddtopmenubar" class="mattblackmenu">
+<UL>
+<LI><A href="../ironzone/home.jsp" target="disp"><img width="20px" height="15px" align="absmiddle" src="images/home17.svg" alt="home page"></A></LI>
+  <LI><A href="qr_entry_screen.jsp">QR CODE DRWG. RTR. SYSTEM<font color="#FF0000" style="font-style:italic">(New)</font></A></LI>
+  </UL>
+</DIV>
+  </BODY>
+</html>
+
+
+<SCRIPT type="text/javascript">
+ddlevelsmenu.setup("ddtopmenubar", "topbar") ddlevelsmenu.setup("mainmenuid", "topbar")
+</SCRIPT>
+<UL id="ddsubmenu0" class="ddsubmenustyle">
+<!-- 
+  <UL> tlc_thermal_scan_report.jsp torpedo_temp_profile.jsp  tlc_max_temp_report.jsp
+  <li><a href="Persdets.jsp" TARGET="disp">Personal Details</a></li>-->
+  <LI><A href="../incos/tlc_thermal_scan_report.jsp" TARGET="disp">TLC DAILY REPORT</A></LI> 
+  <LI><A href="../incos/taphole_level.jsp" TARGET="disp">TORPEDO LEVEL</A></LI>
+  <LI><A href="../incos/torpedo_temp_profile.jsp" TARGET="disp">TLC GRAPHICS REPORT</A></LI>
+  <LI><A href="../incos/tlc_query_detail.jsp" TARGET="disp">TLC QUERY REPORT</A></LI>
+  <LI><A href="../incos/tlc_max_temp_report.jsp" TARGET="disp">TLC MAX TEMP REPORT</A></LI>
+  <LI><A href="../incos/torpedo_thermal_entry.jsp" TARGET="disp">TLC TEMP ENTRY SCREEN</A></LI>
+  </UL>
+  
+
+
+ 
+
+
+<link rel="stylesheet" href="qr_style1.css"> 
+<script src="validate.js"></script>
+  </script>
+
+<body >
+
+<script>
+alert("");
+</script>
+
+<div id="container0">
+<div align="center" >
+ <img id="img1" src="sail_logo.png" alt="Sail logo"/>
+  <h3 align="center" >QR CODE BASED DRWG. RETRIEVAL SYSTEM (User-<span style=" color:#FF0099">'SP3EM'</span>)&nbsp;</br><button id="logout" onclick="logout1();">Logout</button> </h3>
+ 
+</div>
+<form action="qr_entry_screen.jsp" target="_self" onsubmit="return validateForm()">
+<div id="container1">
+<label for="shname">SHOP NAME </label><input type="text" class="s2" id="shname" name="shname" placeholder="Shop name" value="SP3" disabled="disabled">
+<label for="secname">SECTION NAME </label><input type="text" class="s2" id="secname" name="secname" placeholder="Section Name" value="EM" disabled="disabled">
+<label for="areaname">AREA NAME </label>
+<select name="areaname" id="areaname" class="s21" onchange="areachange();">
+  
+  <option value="RM" >RM</option>
+  
+  <option value="MC2" >MC2</option>
+  
+  <option value="MC1" >MC1</option>
+  
+</select>
+<input type="text" class="s2" id="areaname" name="areaname" placeholder="Area Name">-->
+</div><container1>
+<div id="container2">
+     <label for="docname">DOCUMENT NAME </label>
+    <input type="text" class="s1" id="docname" name="docname" placeholder="Document name.." onchange="docchange(this.value)" value="" />
+	<div id="container4">
+	</div>< container4>
+     <label for="seldoc">SELECT DOCUMENT</label>
+    <select class="s1" id="seldoc" name="seldoc">
+      <option value="doc1">DOC1</option>
+      <option value="doc2">DOC2</option>
+      <option value="doc3">DOC3</option>
+    </select>
+  
+
+    <label for="lname">DOCUMENT NO </label>
+    <input type="text" class="s1" id="docno" name="docno" placeholder="Document Number.." value="">
+
+    
+    <input type="submit" value="Submit">
+  </form>
+</div><container2>
+<div id="container3">
+
+  <div class="input-group mb-3">
+        <input type="file" class="form-control" id="inputFile" aria-describedby="inputFileHelp">
+        <label class="input-group-text" for="inputFile">Upload</label>
+      </div>
+      <div id="inputFileHelp" class="form-text">*Upload the CSV file containing data.</div>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var fileInput = document.getElementById("inputFile");
+      var file = fileInput.files[0];
+      var allowedExtensions = ["csv"];
+
+      if (file) {
+        var fileName = file.name;
+        var fileExtension = fileName.split(".").pop().toLowerCase();
+        if (allowedExtensions.indexOf(fileExtension) === -1) {
+          alert("Invalid file type. Please select a CSV file.");
+          fileInput.value = "";
+          return false;
+        }
+      } else {
+        alert("Please select a file.");
+        return false;
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
